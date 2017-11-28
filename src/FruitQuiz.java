@@ -9,6 +9,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.JApplet;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class FruitQuiz extends KeyAdapter {
 
@@ -23,27 +24,30 @@ public class FruitQuiz extends KeyAdapter {
 	public void keyPressed(KeyEvent arg0) {
 		int keyCode = arg0.getKeyCode();
 		// 1. Print out the key code variable
-		
+		System.out.println(keyCode);
 
 		// 2. Make 3 variables that hold the key codes for apple, banana and carrot
-
+		int a = 65;
+		int b = 66;
+		int c = 67;
 		
-
-		
-		if (question1.isShowing()) {
 			// 3. If they touched the right fruit, do steps 4 and 7
-			
+		if(a==65){
+		
 				// 4. Call the correct() method
-				
+				correct();
 				// 7. Use the nextQuestion() method to go to question2
+			nextQuestion();
+		}else{
 			
-			
+			incorrect();
+		}
 			// 8. else (if they touched something else)
 				
 				// 9. Call the incorrect() method
 			
 
-		}
+		
 
 		// 12. If question2 is showing,
 		
@@ -65,7 +69,7 @@ public class FruitQuiz extends KeyAdapter {
 
 	}
 
-	private void nextQuestion(JLabel newQuestion) {
+	private void nextQuestion() {
 		frame.remove(question1);
 		frame.remove(question2);
 		frame.remove(question3);
