@@ -14,10 +14,11 @@ import javax.swing.JOptionPane;
 public class FruitQuiz extends KeyAdapter {
 
 	void makeQuestions() {
-		question1 = new JLabel(
+	question1 = new JLabel(
 				"<html>Which is not a real animal? <br> A: Flubber Monkey <br> B: Pink Fairy Armadillo <br> C: Dumbo Octopus</html>");
 		// 11. Make another question called "question2"
-		
+	question2 = new JLabel(
+			"<html>Which is a force <br> A: friction <br> B: star wars <br> C: velocity</html>");
 	}
 
 	@Override
@@ -49,7 +50,7 @@ public class FruitQuiz extends KeyAdapter {
 
 		
 
-		// 12. If question2 is showing,
+		// 12. If question2 is showing
 		
 			// 13. check if it is right or wrong like you did for question1
 	}
@@ -74,7 +75,7 @@ public class FruitQuiz extends KeyAdapter {
 		frame.remove(question2);
 		frame.remove(question3);
 		frame.remove(question4);
-		frame.add(newQuestion);
+		frame.add(question2);
 		frame.pack();
 		frame.setVisible(true);
 	}
