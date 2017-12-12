@@ -20,13 +20,18 @@ public class DontForgetTheLyrics {
 	
 	public static void main(String[] args) {
 		// 4. Make a pop-up to explain the game.
-
+JOptionPane.showMessageDialog(null,"Here's the rules of the game!\n listen to this song and type in the rest of it.\n (you should know this) ");
 		// 5. Use the playSound method to play your song.
-
+playSound("sound for program.wav");
 		// 6. Make a pop-up for the player to type their answer.
-
+String z=JOptionPane.showInputDialog("type your answer here");
 		// 7. If they answered correctly, tell them that they were right.
 
+if(z.equals("star")){
+	JOptionPane.showMessageDialog(null, "correct!");
+}else {
+	JOptionPane.showMessageDialog(null, "incorrect.\n The real answer is star!");
+}
 		// 8. Otherwise, tell them they are wrong, and give them the answer.
 
 		// 9. Record another sound and repeat steps 5-8.

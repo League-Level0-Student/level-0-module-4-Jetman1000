@@ -33,13 +33,13 @@ public class FruitQuiz extends KeyAdapter {
 		int c = 67;
 		
 			// 3. If they touched the right fruit, do steps 4 and 7
-		if(a==65){
+		if(a==keyCode){
 		
 				// 4. Call the correct() method
 				correct();
 				// 7. Use the nextQuestion() method to go to question2
 			nextQuestion();
-		}else{
+		} if(a!=keyCode){
 			
 			incorrect();
 		}
@@ -51,8 +51,17 @@ public class FruitQuiz extends KeyAdapter {
 		
 
 		// 12. If question2 is showing
-		
+		if(b==keyCode) {
+			
+			correct();
+			
+		}if(b!=keyCode){
+			incorrect();
+		}
 			// 13. check if it is right or wrong like you did for question1
+	
+	
+	
 	}
 
 	private void correct() {
@@ -60,13 +69,13 @@ public class FruitQuiz extends KeyAdapter {
 		// the default package. It must be a .wav file. 
 		// There are lots on freesound.org
 		// 6. Use the playSound method to play your sound
-
+playSound("correct sound.wav");
 
 	}
 
 	private void incorrect() {
 		// 10. Find a sound for wrong answers and put it in the default package. Use the playSound method to play it.
-	
+	playSound("incorrect sound.wav");
 
 	}
 
